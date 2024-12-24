@@ -4,10 +4,11 @@ go
 use Ung_Dung_Dao_Tao_Chung_Chi_Tieng_Anh
 go
 
--- Tạo bảng Người dùng
-CREATE TABLE NguoiDung (
-    MaNguoiDung INT PRIMARY KEY IDENTITY(1,1),
+-- Tạo bảng Tài khoản
+CREATE TABLE Tài khoản (
+    MaTaikhoan INT PRIMARY KEY IDENTITY(1,1),
     HoTen VARCHAR(100) NOT NULL,
+    Gioitinh CHAR(3) NOT NULL,
     Email VARCHAR(100) UNIQUE NOT NULL,
     MatKhau VARCHAR(255) NOT NULL, 
     VaiTro NVARCHAR(100) NOT NULL CHECK(VaiTro IN(N'Học viên',N'Giảng viên',N'Quản trị viên')), 
